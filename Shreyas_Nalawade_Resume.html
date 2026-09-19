@@ -11,9 +11,9 @@
     color: #111;
     max-width: 820px;
     margin: 0 auto;
-    padding: 32px 36px 40px;
-    line-height: 1.55;
-    font-size: 13.5px;
+    padding: 28px 34px 36px;
+    line-height: 1.48;
+    font-size: 13px;
     background: #fff;
   }
   h1 {
@@ -44,12 +44,12 @@
     color: #888;
   }
   h2 {
-    font-size: 12.5px;
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1.1px;
     border-bottom: 1.5px solid #111;
-    padding-bottom: 5px;
-    margin: 22px 0 12px 0;
+    padding-bottom: 4px;
+    margin: 16px 0 8px 0;
     font-weight: 700;
   }
   .summary {
@@ -69,7 +69,7 @@
     color: #111;
   }
   .skills-grid dd { margin: 0; }
-  .entry { margin-bottom: 14px; }
+  .entry { margin-bottom: 10px; }
   .entry:last-child { margin-bottom: 0; }
   .entry-header {
     display: flex;
@@ -103,7 +103,7 @@
     margin: 6px 0 0 0;
     padding-left: 18px;
   }
-  li { margin-bottom: 7px; }
+  li { margin-bottom: 4px; }
   .edu-degree { font-weight: 700; }
   .meta { font-size: 12.5px; color: #333; margin-top: 3px; }
   .download-bar {
@@ -170,9 +170,8 @@
 
 <h2>Professional Summary</h2>
 <p class="summary">
-Full Stack Developer with production experience building high-scale CPaaS messaging platforms and digital signage systems used by millions of end users.
-Skilled in Java, Spring Boot, Laravel/PHP, React, JavaScript, MySQL/MariaDB, MongoDB, Redis, and Kafka. At Insign Technology, worked with the team on enterprise SMS/RCS/WhatsApp/Voice/Email campaigns, IP-TV device networks, REST APIs, queues, and performance-focused reporting.
-Strong in converting complex business requirements into scalable, maintainable software with focus on throughput, reliability, and clean architecture.
+Full Stack Developer with production experience building high-scale CPaaS platforms, digital signage systems, and SaaS partner portals used by millions of end users.
+Skilled in Java, Spring Boot, Laravel/PHP, React, JavaScript, MySQL/MariaDB, MongoDB, Redis, and Kafka. At Insign Technology, worked with the team on SMS/RCS/WhatsApp/Voice/Email campaigns, IP-TV networks, payments, AI tooling, REST APIs, and scalable reporting.
 </p>
 
 <h2>Technical Skills</h2>
@@ -185,10 +184,10 @@ Strong in converting complex business requirements into scalable, maintainable s
   <dd>React.js, JavaScript, Blade, Vite, Tailwind CSS, jQuery</dd>
   <dt>Databases</dt>
   <dd>MySQL, MariaDB, MongoDB, Redis, Oracle SQL</dd>
-  <dt>Messaging / Scale</dt>
-  <dd>Kafka, Redis, SMPP/Kannel, WhatsApp Cloud API, RCS, SMTP</dd>
-  <dt>Tools / DevOps</dt>
-  <dd>Git, GitHub, GitHub Actions (CI/CD), Linux/VPS, Laravel Sanctum, Telescope, Postman</dd>
+  <dt>Integrations</dt>
+  <dd>Kafka, SMPP/Kannel, WhatsApp Cloud API, RCS, Razorpay, Google Business, SMTP</dd>
+  <dt>Tools</dt>
+  <dd>Git, GitHub Actions, Linux/VPS, Laravel Sanctum, DomPDF, Telescope, Postman</dd>
 </dl>
 
 <h2>Professional Experience</h2>
@@ -198,13 +197,12 @@ Strong in converting complex business requirements into scalable, maintainable s
     <span class="entry-title">Software Engineer &mdash; Insign Technology Pvt Ltd</span>
     <span class="entry-date">Mar 2025 &ndash; Present</span>
   </div>
-  <div class="entry-sub">Mumbai, Maharashtra | Full Stack Development (CPaaS, Digital Signage &amp; Business Systems)</div>
+  <div class="entry-sub">Mumbai, Maharashtra | Full Stack Development (CPaaS, Digital Signage &amp; SaaS Platforms)</div>
   <ul>
-    <li><strong>Multichannel CPaaS Platform</strong> &mdash; Built scalable SMS/RCS/WhatsApp/Voice/Email campaign system in Laravel with Kannel gateway integration, Redis/Kafka pipelines, and million-row report generation serving millions of users.</li>
-    <li><strong>IP TV / Digital Signage Platform</strong> &mdash; Developed Laravel-based campaign management for multi-outlet Android TV networks with device APIs, playlist scheduling, RBAC, and analytics reporting.</li>
-    <li>Developed and maintained SaaS CRM and business applications using Laravel, React.js, Java, and MySQL for advertising and SMB clients.</li>
-    <li>Delivered Smart Inventory &amp; Finance Manager, Dental Clinic Management System, and supporting REST APIs with CI/CD deployment on Linux/VPS.</li>
-    <li>Collaborated with the team and clients on requirements, iterative releases, dashboards, and production monitoring.</li>
+    <li><strong>Multichannel CPaaS</strong> &mdash; Built scalable SMS/RCS/WhatsApp/Voice/Email campaign system in Laravel with Kannel, Redis/Kafka pipelines, and million-row reporting for millions of users.</li>
+    <li><strong>IP TV Platform</strong> &mdash; Developed digital signage campaign management for multi-outlet Android TV networks with device APIs, playlist scheduling, RBAC, and analytics.</li>
+    <li><strong>Dukandari Partners</strong> &mdash; Built multi-tenant partner/admin portal with Razorpay billing, AI usage monitoring, Google Business outlets, and AI voice-agent support.</li>
+    <li>Delivered inventory, clinic CRM, and supporting REST APIs; collaborated with team on releases, dashboards, and production monitoring.</li>
   </ul>
 </div>
 
@@ -212,14 +210,12 @@ Strong in converting complex business requirements into scalable, maintainable s
 
 <div class="entry">
   <div class="entry-title">Multichannel Messaging Platform (CPaaS) &mdash; SMS, RCS, WhatsApp, Voice &amp; Email</div>
-  <div class="stack-line">PHP 8.2, Laravel, MySQL/MariaDB, Redis, Kafka, Horizon, SMPP/Kannel, WhatsApp Cloud API, REST APIs, Webhooks, Blade/Vite/Tailwind</div>
+  <div class="stack-line">PHP 8.2, Laravel, MySQL/MariaDB, Redis, Kafka, Horizon, SMPP/Kannel, WhatsApp Cloud API, REST APIs, Blade/Vite/Tailwind</div>
   <ul>
-    <li>Built and maintained a production multichannel communication platform enabling bulk campaigns, delivery tracking, billing, and admin ops across SMS, RCS, WhatsApp, Voice, and Email for millions of users.</li>
-    <li>Developed end-to-end campaign and reporting flows with role-based access (admin / reseller / user).</li>
-    <li>Integrated Kannel SMS gateway (SMPP) &mdash; vendor management, route assignment, DLR handling, and live gateway monitoring.</li>
-    <li>Designed large-scale report downloads (millions of rows) using queued jobs, chunked CSV generation, and ZIP packaging to avoid timeouts/memory failures.</li>
-    <li>Built high-throughput voting/ingestion features with Redis validation, DB partitioning, and Kafka-ready processing for tens of millions of records.</li>
-    <li>Implemented WhatsApp automation/workflow builder, live chat, webhooks, campaign analytics, and optimized EOD MIS dashboards with caching.</li>
+    <li>Built production multichannel platform for bulk campaigns, delivery tracking, billing, and admin ops across SMS, RCS, WhatsApp, Voice, and Email for millions of users.</li>
+    <li>Integrated Kannel SMS gateway (SMPP) with vendor/route management, DLR handling, and live gateway monitoring; RBAC for admin/reseller/user.</li>
+    <li>Designed million-row report downloads using queued jobs, chunked CSV generation, and ZIP packaging to avoid timeouts.</li>
+    <li>Built Redis/Kafka-ready high-throughput ingestion, WhatsApp workflow/live chat/webhooks, and optimized EOD MIS dashboards with caching.</li>
   </ul>
 </div>
 
@@ -227,10 +223,21 @@ Strong in converting complex business requirements into scalable, maintainable s
   <div class="entry-title">IP TV / Digital Signage Campaign Platform</div>
   <div class="stack-line">Laravel 12, PHP 8.2, MySQL, Laravel Sanctum, REST APIs, Blade</div>
   <ul>
-    <li>Designed and developed an end-to-end campaign management system for multi-outlet digital signage (users, outlets, devices, media, campaigns, reports).</li>
-    <li>Implemented secure device onboarding (PIN-based registration), real-time heartbeats, and campaign sync via REST APIs for Android TV clients.</li>
-    <li>Built advanced campaign scheduling (playlist + timeline segments), media deduplication, and device-level runtime tracking.</li>
-    <li>Delivered role-based access (Admin / User / Viewer / Reseller) and campaign performance reports (summary + detailed analytics).</li>
+    <li>Designed end-to-end campaign management for multi-outlet digital signage (users, outlets, devices, media, campaigns, reports).</li>
+    <li>Implemented PIN-based device onboarding, real-time heartbeats, and campaign sync APIs for Android TV clients.</li>
+    <li>Built playlist/timeline scheduling, media deduplication, and device-level runtime tracking.</li>
+    <li>Delivered RBAC (Admin/User/Viewer/Reseller) and campaign performance reports (summary + detailed analytics).</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-title">Dukandari Partners &mdash; Multi-Tenant Partner &amp; Admin Platform</div>
+  <div class="stack-line">Laravel 12, PHP 8.2, MySQL, Blade, Tailwind, Vite, Razorpay, DomPDF, Queues</div>
+  <ul>
+    <li>Developed multi-role admin/partner dashboard for partner hierarchy, merchant onboarding, attributions, and account lifecycle management.</li>
+    <li>Integrated Razorpay for subscriptions, plan upgrades, wallet/credit top-ups, CSV export, and transaction analytics.</li>
+    <li>Built AI operations tooling (credentials, token/cost dashboards, request logs) and AI voice-agent call workflows with transcripts/recordings.</li>
+    <li>Added Google Business Profile outlet audits, Facebook permission sync, PDF invoicing (DomPDF), and OTP-based secure login.</li>
   </ul>
 </div>
 
@@ -238,7 +245,9 @@ Strong in converting complex business requirements into scalable, maintainable s
   <div class="entry-title">Smart Inventory Management System</div>
   <div class="stack-line">Laravel (Blade), PHP, MySQL | github.com/ShreyasNalawade/Sn_Inventory</div>
   <ul>
-    <li>Developed inventory workflows for stock tracking, billing status, ledger/income, and operational reporting.</li>
+    <li>Built inventory workflows for daily stock intake, paid/unpaid bill tracking, and ledger/income records.</li>
+    <li>Implemented credit interest calculations and operational reporting for market business use.</li>
+    <li>Designed MySQL schema and Blade admin screens for day-to-day business operations.</li>
   </ul>
 </div>
 
@@ -246,15 +255,19 @@ Strong in converting complex business requirements into scalable, maintainable s
   <div class="entry-title">Live Chat Application (Real-Time Messaging)</div>
   <div class="stack-line">Laravel, WebSockets, Broadcasting Events | github.com/ShreyasNalawade/LiveChatApp-laravel-websocket</div>
   <ul>
-    <li>Built a real-time messaging app using Laravel WebSockets and event broadcasting for instant chat updates.</li>
+    <li>Built real-time messaging using Laravel WebSockets and event broadcasting for instant chat updates.</li>
+    <li>Implemented chat rooms, presence-style updates, and message delivery over websocket channels.</li>
+    <li>Structured backend events/listeners for scalable real-time communication features.</li>
   </ul>
 </div>
 
 <div class="entry">
-  <div class="entry-title">Dukandari.ai &mdash; AI Marketing Platform (Frontend)</div>
+  <div class="entry-title">Dukandari.ai &mdash; AI Marketing Landing Page</div>
   <div class="stack-line">HTML5, CSS3, JavaScript, GSAP | dukandari.ai</div>
   <ul>
-    <li>Created a conversion-focused SaaS landing page showcasing multi-channel marketing automation.</li>
+    <li>Created conversion-focused SaaS landing page for AI marketing automation across Google, Facebook, Instagram, and WhatsApp.</li>
+    <li>Built animated hero, pricing, and testimonial sections with responsive layout.</li>
+    <li>Showcased multi-channel integration flows to support product marketing and lead capture.</li>
   </ul>
 </div>
 
@@ -262,7 +275,9 @@ Strong in converting complex business requirements into scalable, maintainable s
   <div class="entry-title">Sharashri &mdash; Folk Art &amp; Culture Website</div>
   <div class="stack-line">HTML5, CSS3, Tailwind CSS, JavaScript | sharashri.online</div>
   <ul>
-    <li>Built a responsive cultural showcase site with Marathi typography, event/gallery sections, and storytelling layout.</li>
+    <li>Built responsive cultural showcase site with heritage storytelling layout and Marathi typography.</li>
+    <li>Implemented event and gallery sections for folk-art content presentation.</li>
+    <li>Delivered mobile-friendly UI with modern CSS and accessible navigation.</li>
   </ul>
 </div>
 
@@ -296,9 +311,8 @@ Strong in converting complex business requirements into scalable, maintainable s
 <h2>Achievements</h2>
 <ul>
   <li>Contributed to production CPaaS and IP-TV platforms serving millions of users with high-volume messaging, device sync, and analytics.</li>
-  <li>Built million-row reporting pipelines and Redis/Kafka-ready ingestion flows for large-scale campaign and voting workloads.</li>
-  <li>Transitioned from Mechanical Engineering into Full Stack Development through structured Java training and production project delivery.</li>
-  <li>Delivered client-facing systems across messaging, digital signage, healthcare, inventory, and marketing domains with team collaboration.</li>
+  <li>Built million-row reporting pipelines and Redis/Kafka-ready ingestion for large-scale campaign workloads.</li>
+  <li>Delivered Laravel + payments + AI integrations (Razorpay, voice-agent, usage analytics) across partner SaaS operations.</li>
 </ul>
 
 <div class="note-box">
