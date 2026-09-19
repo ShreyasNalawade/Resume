@@ -170,25 +170,25 @@
 
 <h2>Professional Summary</h2>
 <p class="summary">
-Full Stack Developer with production experience building SaaS CRMs, business automation platforms, and high-traffic messaging systems.
-Skilled in Java, Spring Boot, Laravel/PHP, React, JavaScript, MySQL, and MongoDB. At Insign Technology, delivered end-to-end web systems covering REST APIs, real-time features, database design, and client-facing UIs.
-Strong in converting business requirements into scalable, maintainable software with focus on performance, security, and clean architecture.
+Full Stack Developer with production experience building high-scale CPaaS messaging platforms and digital signage systems used by millions of end users.
+Skilled in Java, Spring Boot, Laravel/PHP, React, JavaScript, MySQL/MariaDB, MongoDB, Redis, and Kafka. At Insign Technology, worked with the team on enterprise SMS/RCS/WhatsApp/Voice/Email campaigns, IP-TV device networks, REST APIs, queues, and performance-focused reporting.
+Strong in converting complex business requirements into scalable, maintainable software with focus on throughput, reliability, and clean architecture.
 </p>
 
 <h2>Technical Skills</h2>
 <dl class="skills-grid">
   <dt>Languages</dt>
-  <dd>Java, JavaScript, PHP, SQL, HTML5, CSS3</dd>
+  <dd>Java, JavaScript, PHP 8.2, SQL, HTML5, CSS3</dd>
   <dt>Backend</dt>
-  <dd>Spring Boot, Laravel, REST APIs, JDBC, Hibernate, Node fundamentals</dd>
+  <dd>Laravel, Spring Boot, REST APIs, Webhooks, Queue Jobs (Horizon), JDBC, Hibernate</dd>
   <dt>Frontend</dt>
-  <dd>React.js, JavaScript, Tailwind CSS, jQuery, Responsive UI</dd>
+  <dd>React.js, JavaScript, Blade, Vite, Tailwind CSS, jQuery</dd>
   <dt>Databases</dt>
-  <dd>MySQL, MongoDB, Oracle SQL, Redis</dd>
+  <dd>MySQL, MariaDB, MongoDB, Redis, Oracle SQL</dd>
+  <dt>Messaging / Scale</dt>
+  <dd>Kafka, Redis, SMPP/Kannel, WhatsApp Cloud API, RCS, SMTP</dd>
   <dt>Tools / DevOps</dt>
-  <dd>Git, GitHub, GitHub Actions (CI/CD), Linux/VPS, phpMyAdmin, Postman</dd>
-  <dt>Other</dt>
-  <dd>WebSockets, WhatsApp Cloud API, SMTP, Selenium (Java), OOP, SDLC</dd>
+  <dd>Git, GitHub, GitHub Actions (CI/CD), Linux/VPS, Laravel Sanctum, Telescope, Postman</dd>
 </dl>
 
 <h2>Professional Experience</h2>
@@ -198,19 +198,49 @@ Strong in converting business requirements into scalable, maintainable software 
     <span class="entry-title">Software Engineer &mdash; Insign Technology Pvt Ltd</span>
     <span class="entry-date">Mar 2025 &ndash; Present</span>
   </div>
-  <div class="entry-sub">Mumbai, Maharashtra | Full Stack Development (SaaS, CRM &amp; Business Automation)</div>
+  <div class="entry-sub">Mumbai, Maharashtra | Full Stack Development (CPaaS, Digital Signage &amp; Business Systems)</div>
   <ul>
-    <li>Develop and maintain SaaS CRM and business management applications using Laravel, React.js, Java, and MySQL for advertising and SMB clients.</li>
-    <li>Built a Dental Clinic Management System with patient records, appointment booking, billing/invoicing, and digital prescriptions (Laravel, MySQL, Tailwind).</li>
-    <li>Engineered an IP-TV Control Engine enabling single-click ad broadcast, 6-digit device pairing, campaign scheduling, and WebSocket-based live device control at scale.</li>
-    <li>Delivered a Smart Inventory &amp; Finance Manager for market operations: stock intake, paid/unpaid bill tracking, daily ledger/income, and credit interest calculations.</li>
-    <li>Developed a Bulk WhatsApp &amp; Email Campaign Engine with personalized media, chatbot flows, Redis-backed high-speed delivery, and per-contact downloadable reports.</li>
-    <li>Designed REST APIs, optimized MySQL schemas/queries, and deployed production systems on Linux/VPS with Git-based CI/CD workflows.</li>
-    <li>Collaborated with clients to gather requirements, ship iterative releases, and improve UX for operational dashboards and admin panels.</li>
+    <li><strong>Multichannel CPaaS Platform</strong> &mdash; Built scalable SMS/RCS/WhatsApp/Voice/Email campaign system in Laravel with Kannel gateway integration, Redis/Kafka pipelines, and million-row report generation serving millions of users.</li>
+    <li><strong>IP TV / Digital Signage Platform</strong> &mdash; Developed Laravel-based campaign management for multi-outlet Android TV networks with device APIs, playlist scheduling, RBAC, and analytics reporting.</li>
+    <li>Developed and maintained SaaS CRM and business applications using Laravel, React.js, Java, and MySQL for advertising and SMB clients.</li>
+    <li>Delivered Smart Inventory &amp; Finance Manager, Dental Clinic Management System, and supporting REST APIs with CI/CD deployment on Linux/VPS.</li>
+    <li>Collaborated with the team and clients on requirements, iterative releases, dashboards, and production monitoring.</li>
   </ul>
 </div>
 
 <h2>Projects</h2>
+
+<div class="entry">
+  <div class="entry-title">Multichannel Messaging Platform (CPaaS) &mdash; SMS, RCS, WhatsApp, Voice &amp; Email</div>
+  <div class="stack-line">PHP 8.2, Laravel, MySQL/MariaDB, Redis, Kafka, Horizon, SMPP/Kannel, WhatsApp Cloud API, REST APIs, Webhooks, Blade/Vite/Tailwind</div>
+  <ul>
+    <li>Built and maintained a production multichannel communication platform enabling bulk campaigns, delivery tracking, billing, and admin ops across SMS, RCS, WhatsApp, Voice, and Email for millions of users.</li>
+    <li>Developed end-to-end campaign and reporting flows with role-based access (admin / reseller / user).</li>
+    <li>Integrated Kannel SMS gateway (SMPP) &mdash; vendor management, route assignment, DLR handling, and live gateway monitoring.</li>
+    <li>Designed large-scale report downloads (millions of rows) using queued jobs, chunked CSV generation, and ZIP packaging to avoid timeouts/memory failures.</li>
+    <li>Built high-throughput voting/ingestion features with Redis validation, DB partitioning, and Kafka-ready processing for tens of millions of records.</li>
+    <li>Implemented WhatsApp automation/workflow builder, live chat, webhooks, campaign analytics, and optimized EOD MIS dashboards with caching.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-title">IP TV / Digital Signage Campaign Platform</div>
+  <div class="stack-line">Laravel 12, PHP 8.2, MySQL, Laravel Sanctum, REST APIs, Blade</div>
+  <ul>
+    <li>Designed and developed an end-to-end campaign management system for multi-outlet digital signage (users, outlets, devices, media, campaigns, reports).</li>
+    <li>Implemented secure device onboarding (PIN-based registration), real-time heartbeats, and campaign sync via REST APIs for Android TV clients.</li>
+    <li>Built advanced campaign scheduling (playlist + timeline segments), media deduplication, and device-level runtime tracking.</li>
+    <li>Delivered role-based access (Admin / User / Viewer / Reseller) and campaign performance reports (summary + detailed analytics).</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-title">Smart Inventory Management System</div>
+  <div class="stack-line">Laravel (Blade), PHP, MySQL | github.com/ShreyasNalawade/Sn_Inventory</div>
+  <ul>
+    <li>Developed inventory workflows for stock tracking, billing status, ledger/income, and operational reporting.</li>
+  </ul>
+</div>
 
 <div class="entry">
   <div class="entry-title">Live Chat Application (Real-Time Messaging)</div>
@@ -221,18 +251,10 @@ Strong in converting business requirements into scalable, maintainable software 
 </div>
 
 <div class="entry">
-  <div class="entry-title">Smart Inventory Management System</div>
-  <div class="stack-line">Laravel (Blade), PHP, MySQL | github.com/ShreyasNalawade/Sn_Inventory</div>
-  <ul>
-    <li>Developed inventory workflows for stock tracking, billing status, and operational reporting used in business day-to-day operations.</li>
-  </ul>
-</div>
-
-<div class="entry">
   <div class="entry-title">Dukandari.ai &mdash; AI Marketing Platform (Frontend)</div>
   <div class="stack-line">HTML5, CSS3, JavaScript, GSAP | dukandari.ai</div>
   <ul>
-    <li>Created a conversion-focused SaaS landing page showcasing multi-channel marketing automation (Google, Facebook, Instagram, WhatsApp).</li>
+    <li>Created a conversion-focused SaaS landing page showcasing multi-channel marketing automation.</li>
   </ul>
 </div>
 
@@ -273,10 +295,10 @@ Strong in converting business requirements into scalable, maintainable software 
 
 <h2>Achievements</h2>
 <ul>
+  <li>Contributed to production CPaaS and IP-TV platforms serving millions of users with high-volume messaging, device sync, and analytics.</li>
+  <li>Built million-row reporting pipelines and Redis/Kafka-ready ingestion flows for large-scale campaign and voting workloads.</li>
   <li>Transitioned from Mechanical Engineering into Full Stack Development through structured Java training and production project delivery.</li>
-  <li>Independently owned multiple client-facing systems (CRM, IPTV broadcast, inventory finance, messaging automation) from requirement analysis to deployment.</li>
-  <li>Improved large-scale data processing workflows (including bulk MySQL operations) and implemented CI/CD auto-deployment for Laravel apps on VPS.</li>
-  <li>Delivered production UIs and backend modules used by real businesses in healthcare, advertising/broadcasting, and retail operations.</li>
+  <li>Delivered client-facing systems across messaging, digital signage, healthcare, inventory, and marketing domains with team collaboration.</li>
 </ul>
 
 <div class="note-box">
