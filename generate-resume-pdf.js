@@ -116,7 +116,7 @@ doc
   .fontSize(8.4)
   .fillColor("#333333")
   .text(
-    "Mumbai, Maharashtra, India  |  shreyasnalawade2002@gmail.com",
+    "Mumbai, Maharashtra, India  |  +91 86527 21345  |  shreyasnalawade2002@gmail.com",
     left,
     doc.y,
     { width: headerWidth, lineGap: 2 }
