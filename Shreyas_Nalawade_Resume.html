@@ -23,6 +23,23 @@
     text-transform: uppercase;
     font-weight: 700;
   }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 4px;
+  }
+  .header-text { flex: 1; min-width: 0; }
+  .profile-photo {
+    width: 78px;
+    height: 78px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    flex-shrink: 0;
+  }
   .title-line {
     font-size: 13.5px;
     color: #222;
@@ -32,7 +49,7 @@
   .contact-line {
     font-size: 12px;
     color: #333;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
     line-height: 1.7;
   }
   .contact-line a {
@@ -158,14 +175,19 @@
   <button class="download-btn secondary" type="button" onclick="window.print()">Print Preview</button>
 </div>
 
-<h1>Shreyas Nalawade</h1>
-<div class="title-line">Full Stack Developer | Java | Spring Boot | Laravel | React</div>
-<div class="contact-line">
-  <span>Mumbai, Maharashtra, India</span>
-  <span><a href="mailto:shreyashnalawade09@gmail.com">shreyashnalawade09@gmail.com</a></span>
-  <span><a href="https://www.linkedin.com/in/shreyas-s-nalawade-234340283/">linkedin.com/in/shreyas-s-nalawade-234340283</a></span>
-  <span><a href="https://github.com/ShreyasNalawade">github.com/ShreyasNalawade</a></span>
-  <span><a href="https://shreyas.ssngo.shop/">shreyas.ssngo.shop</a></span>
+<div class="header">
+  <div class="header-text">
+    <h1>Shreyas Nalawade</h1>
+    <div class="title-line">Full Stack Developer | Java | Spring Boot | Laravel | React</div>
+    <div class="contact-line">
+      <span>Mumbai, Maharashtra, India</span>
+      <span><a href="mailto:shreyasnalawade2002@gmail.com">shreyasnalawade2002@gmail.com</a></span>
+      <span><a href="https://www.linkedin.com/in/shreyas-s-nalawade-234340283/">linkedin.com/in/shreyas-s-nalawade-234340283</a></span>
+      <span><a href="https://github.com/ShreyasNalawade">github.com/ShreyasNalawade</a></span>
+      <span><a href="https://shreyas.ssngo.shop/">shreyas.ssngo.shop</a></span>
+    </div>
+  </div>
+  <img class="profile-photo" src="profile.png" alt="Shreyas Nalawade" width="78" height="78" />
 </div>
 
 <h2>Professional Summary</h2>
@@ -295,6 +317,13 @@ Skilled in Java, Spring Boot, Laravel/PHP, React, JavaScript, MySQL/MariaDB, Mon
     <span class="entry-date">2018 &ndash; 2021</span>
   </div>
   <div class="meta">Government Polytechnic Mumbai &mdash; 76.40%</div>
+</div>
+<div class="entry">
+  <div class="entry-header">
+    <span><span class="edu-degree">SSC (10th Standard)</span></span>
+    <span class="entry-date">2018</span>
+  </div>
+  <div class="meta">Maharashtra State Board &mdash; 85.60%</div>
 </div>
 
 <h2>Certifications &amp; Training</h2>

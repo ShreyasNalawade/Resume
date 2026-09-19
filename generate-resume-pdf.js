@@ -30,13 +30,13 @@ function ensureSpace(needed = 40) {
 
 function section(title) {
   ensureSpace(30);
-  doc.moveDown(0.45);
+  doc.moveDown(0.55);
   doc.font("Helvetica-Bold").fontSize(10.5).fillColor("#111111").text(title.toUpperCase(), {
     characterSpacing: 0.6,
   });
   const y = doc.y + 3;
   doc.moveTo(left, y).lineTo(rightEdge, y).lineWidth(1).strokeColor("#111111").stroke();
-  doc.y = y + 7;
+  doc.y = y + 8;
 }
 
 function bullet(text) {
@@ -48,14 +48,14 @@ function bullet(text) {
   doc.text(text, textX, startY, {
     width: pageWidth - 12,
     align: "left",
-    lineGap: 1.4,
+    lineGap: 2,
   });
-  doc.moveDown(0.22);
+  doc.moveDown(0.32);
 }
 
 function entryHeader(title, date) {
   ensureSpace(24);
-  doc.moveDown(0.12);
+  doc.moveDown(0.18);
   const titleWidth = pageWidth * 0.72;
   const dateWidth = pageWidth * 0.28;
   const y = doc.y;
@@ -70,7 +70,7 @@ function entryHeader(title, date) {
       .fillColor("#333333")
       .text(date, left + titleWidth, y, { width: dateWidth, align: "right" });
   }
-  doc.y = Math.max(titleBottom, doc.y) + 1;
+  doc.y = Math.max(titleBottom, doc.y) + 2;
 }
 
 function stackLine(text) {
@@ -78,28 +78,54 @@ function stackLine(text) {
     .font("Helvetica-Oblique")
     .fontSize(8.2)
     .fillColor("#444444")
-    .text(text, { width: pageWidth, lineGap: 1 });
-  doc.moveDown(0.1);
+    .text(text, { width: pageWidth, lineGap: 1.2 });
+  doc.moveDown(0.14);
 }
 
-// Header
-doc.font("Helvetica-Bold").fontSize(17).fillColor("#111111").text("SHREYAS NALAWADE");
-doc.moveDown(0.15);
+// Header with profile photo (top-right)
+const profilePath = path.join(__dirname, "profile.png");
+const photoSize = 68;
+const photoX = rightEdge - photoSize;
+const photoY = doc.page.margins.top;
+const headerWidth = pageWidth - photoSize - 14;
+
+if (fs.existsSync(profilePath)) {
+  doc.image(profilePath, photoX, photoY, {
+    width: photoSize,
+    height: photoSize,
+    fit: [photoSize, photoSize],
+    align: "center",
+    valign: "center",
+  });
+}
+
+doc.font("Helvetica-Bold").fontSize(17).fillColor("#111111").text("SHREYAS NALAWADE", left, photoY, {
+  width: headerWidth,
+});
+doc.moveDown(0.18);
 doc
   .font("Helvetica-Bold")
   .fontSize(9.5)
   .fillColor("#222222")
-  .text("Full Stack Developer | Java | Spring Boot | Laravel | React");
-doc.moveDown(0.2);
+  .text("Full Stack Developer | Java | Spring Boot | Laravel | React", left, doc.y, {
+    width: headerWidth,
+  });
+doc.moveDown(0.22);
 doc
   .font("Helvetica")
   .fontSize(8.4)
   .fillColor("#333333")
   .text(
-    "Mumbai, Maharashtra, India  |  shreyashnalawade09@gmail.com  |  linkedin.com/in/shreyas-s-nalawade-234340283",
-    { width: pageWidth, lineGap: 1.5 }
+    "Mumbai, Maharashtra, India  |  shreyasnalawade2002@gmail.com",
+    left,
+    doc.y,
+    { width: headerWidth, lineGap: 2 }
   );
-doc.text("github.com/ShreyasNalawade  |  shreyas.ssngo.shop", { width: pageWidth });
+doc.text("linkedin.com/in/shreyas-s-nalawade-234340283", left, doc.y, { width: headerWidth });
+doc.text("github.com/ShreyasNalawade  |  shreyas.ssngo.shop", left, doc.y, { width: headerWidth });
+
+// Keep content below photo area
+doc.y = Math.max(doc.y, photoY + photoSize + 10);
 
 section("Professional Summary");
 doc
@@ -108,7 +134,7 @@ doc
   .fillColor("#111111")
   .text(
     "Full Stack Developer with production experience building high-scale CPaaS platforms, digital signage systems, and SaaS partner portals used by millions of end users. Skilled in Java, Spring Boot, Laravel/PHP, React, JavaScript, MySQL/MariaDB, MongoDB, Redis, and Kafka. At Insign Technology, worked with the team on SMS/RCS/WhatsApp/Voice/Email campaigns, IP-TV networks, payments, AI tooling, REST APIs, and scalable reporting.",
-    { width: pageWidth, align: "left", lineGap: 2 }
+    { width: pageWidth, align: "left", lineGap: 2.6 }
   );
 
 section("Technical Skills");
@@ -227,6 +253,13 @@ doc
   .fontSize(8.8)
   .fillColor("#333333")
   .text("Government Polytechnic Mumbai — 76.40%");
+doc.moveDown(0.28);
+entryHeader("SSC (10th Standard)", "2018");
+doc
+  .font("Helvetica")
+  .fontSize(8.8)
+  .fillColor("#333333")
+  .text("Maharashtra State Board — 85.60%");
 
 section("Certifications & Training");
 entryHeader("Java Full Stack Development — QSpiders", "Completed");
